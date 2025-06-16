@@ -1,15 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dharmik's Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmik Patel</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        h1 { color: #333; }
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header styles with garnet and grey */
+        header {
+            background-color: #B22222;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #666;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: #B22222;
+        }
+
+        /* Main content area */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Content sections */
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #B22222;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #B22222;
+            padding-bottom: 0.5rem;
+        }
+
+        section h3 {
+            color: #666;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        /* Links */
+        a {
+            color: #B22222;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #8B0000;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #666;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Hide sections by default, show the first one */
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            main {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            nav a {
+                display: inline-block;
+                margin: 0.25rem 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to Dharmik's Website!</h1>
-    <p>This site is hosted on GitHub Pages.</p>
-    <p>More content coming soon...</p>
+    <header>
+        <h1>Dharmik Patel</h1>
+        <p>Welcome to my personal website</p>
+    </header>
+    
+    <nav>
+        <a href="#" onclick="showSection('bio')">Bio</a>
+        <a href="#" onclick="showSection('cv')">CV</a>
+        <a href="#" onclick="showSection('research')">Research</a>
+        <a href="#" onclick="showSection('notes')">Notes</a>
+        <a href="#" onclick="showSection('art')">Art</a>
+    </nav>
+    
+    <main>
+        <section id="bio" class="content-section active">
+            <h2>Bio</h2>
+            <p>Welcome! I'm Dharmik Patel. This is where you can share your background, interests, and what you're currently working on.</p>
+            <p>Add your biographical information here - your education, current position, research interests, hobbies, or anything else you'd like visitors to know about you.</p>
+        </section>
+        
+        <section id="cv" class="content-section">
+            <h2>CV</h2>
+            <h3>Education</h3>
+            <p>Add your educational background here.</p>
+            
+            <h3>Experience</h3>
+            <p>List your work experience, internships, or relevant positions.</p>
+            
+            <h3>Skills</h3>
+            <p>Highlight your technical and professional skills.</p>
+            
+            <h3>Publications</h3>
+            <p>List any publications, papers, or research you've contributed to.</p>
+        </section>
+        
+        <section id="research" class="content-section">
+            <h2>Research</h2>
+            <p>Describe your current research projects, interests, and areas of focus.</p>
+            <p>You can include:</p>
+            <ul>
+                <li>Current research projects</li>
+                <li>Research interests and methodologies</li>
+                <li>Collaborations and partnerships</li>
+                <li>Future research directions</li>
+            </ul>
+        </section>
+        
+        <section id="notes" class="content-section">
+            <h2>Notes</h2>
+            <p>This section can contain your academic notes, blog posts, thoughts, or any written content you'd like to share.</p>
+            <p>Consider organizing this into:</p>
+            <ul>
+                <li>Academic notes and summaries</li>
+                <li>Personal reflections</li>
+                <li>Tutorial or how-to guides</li>
+                <li>Book reviews or recommendations</li>
+            </ul>
+        </section>
+        
+        <section id="art" class="content-section">
+            <h2>Art</h2>
+            <p>Showcase your artistic work, creative projects, or visual content here.</p>
+            <p>This could include:</p>
+            <ul>
+                <li>Digital art or illustrations</li>
+                <li>Photography</li>
+                <li>Creative writing</li>
+                <li>Design projects</li>
+                <li>Any other creative endeavors</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Dharmik Patel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+        
+        // Show Bio section by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('bio');
+        });
+    </script>
 </body>
 </html>
