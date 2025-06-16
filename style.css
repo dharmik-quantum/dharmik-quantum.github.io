@@ -29,6 +29,16 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
+header h1 a {
+    color: white;            /* Makes the text visible on red background */
+    text-decoration: none;   /* Optional: remove underline */
+}
+
+header h1 a:hover {
+    text-decoration: underline;  /* Optional: hover effect */
+    color: #ffd700;              /* Optional: gold-ish hover color */
+}
+
 header p {
     font-size: 1.1rem;
     opacity: 0.9;
@@ -54,7 +64,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #8F001B;
+    background-color: white;
+    color: #8F001B;  /* garnet text */
 }
 
 /* Main content area */
