@@ -14,7 +14,7 @@ body {
 
 /* Header styles with garnet and grey */
 header {
-    background: linear-gradient(135deg, #722F37 0%, #8B0000 50%, #666 100%);
+    background-color: #8F001B;
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -34,11 +34,12 @@ header p {
     font-weight: 300;
 }
 
-/* Navigation (if you want to add it later) */
+/* Navigation */
 nav {
     background-color: #666;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav a {
@@ -48,10 +49,11 @@ nav a {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    font-weight: 500;
 }
 
 nav a:hover {
-    background-color: #722F37;
+    background-color: #8F001B;
 }
 
 /* Main content area */
@@ -71,10 +73,10 @@ section {
 }
 
 section h2 {
-    color: #722F37;
+    color: #8F001B;
     margin-bottom: 1rem;
     font-size: 1.8rem;
-    border-bottom: 2px solid #722F37;
+    border-bottom: 2px solid #8F001B;
     padding-bottom: 0.5rem;
 }
 
@@ -85,7 +87,7 @@ section h3 {
 
 /* Links */
 a {
-    color: #722F37;
+    color: #8F001B;
     text-decoration: none;
 }
 
@@ -103,34 +105,25 @@ footer {
     margin-top: 3rem;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    main {
-        padding: 0 1rem;
-    }
-    
-    section {
-        padding: 1.5rem;
-    }
-    
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-    }
+/* Hide sections by default, show the first one */
+.content-section {
+    display: none;
+}
 
-    /* Photo styles */
+.content-section.active {
+    display: block;
+}
+
+/* Photo styles */
 .profile-photo {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    float: right;
-    margin: 0 0 1rem 1rem;
-    border: 3px solid #B22222;
+    display: block;
+    margin: 0 auto 2rem auto;
+    border: 4px solid #8F001B;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .photo {
@@ -161,11 +154,28 @@ footer {
     transform: scale(1.05);
 }
 
-/* Responsive */
+/* Responsive design */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
     .profile-photo {
-        float: none;
-        display: block;
-        margin: 0 auto 1rem auto;
+        width: 200px;
+        height: 200px;
     }
 }
