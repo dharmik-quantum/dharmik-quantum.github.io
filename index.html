@@ -11,87 +11,6 @@
   <script src="LaTeXMathML.js" type="text/javascript">
   </script>
   <style>
-   /* Art Gallery Styles */
-            .art-gallery {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 20px;
-                padding: 20px 0;
-            }
-            
-            .art-item {
-                background: #f8f9fa;
-                border-radius: 8px;
-                padding: 15px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            
-            .art-item:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-            }
-            
-            .art-item img {
-                width: 100%;
-                height: 250px;
-                object-fit: cover;
-                border-radius: 6px;
-                margin-bottom: 10px;
-                cursor: pointer;
-            }
-            
-            .art-item h3 {
-                margin: 0 0 8px 0;
-                color: #333;
-                font-size: 1.2em;
-            }
-            
-            .art-item p {
-                margin: 0;
-                color: #666;
-                font-size: 0.9em;
-                line-height: 1.4;
-            }
-            
-            /* Modal for full-size images */
-            .modal {
-                display: none;
-                position: fixed;
-                z-index: 1000;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.9);
-            }
-            
-            .modal-content {
-                margin: auto;
-                display: block;
-                width: 80%;
-                max-width: 700px;
-                max-height: 80%;
-                object-fit: contain;
-            }
-            
-            .close {
-                position: absolute;
-                top: 15px;
-                right: 35px;
-                color: #f1f1f1;
-                font-size: 40px;
-                font-weight: bold;
-                transition: 0.3s;
-                cursor: pointer;
-            }
-            
-            .close:hover,
-            .close:focus {
-                color: #bbb;
-                text-decoration: none;
-            }
-            
             /* Contact Section Styles */
             .contact-container {
                 display: grid;
@@ -253,15 +172,6 @@
             }
             
             @media (max-width: 768px) {
-                .art-gallery {
-                    grid-template-columns: 1fr;
-                    gap: 15px;
-                }
-                
-                .modal-content {
-                    width: 90%;
-                }
-                
                 .research-gallery {
                     grid-template-columns: 1fr;
                     gap: 15px;
@@ -301,9 +211,6 @@
    </a>
    <a href="#" onclick="showSection('notes')">
     Notes
-   </a>
-   <a href="#" onclick="showSection('art')">
-    Art
    </a>
    <a href="#" onclick="showSection('misc')">
     Miscellaneous
@@ -505,130 +412,14 @@
       Quantum Error Correction.
      </a>
     </p>
-    <br/>
-    <p>
-     Talk given at the uOttawa/NRC PQuIP group seminar:
-     <a href="Nonlinear Generation of Gaussian States.pdf" rel="noopener noreferrer" target="_blank">
-      Nonlinear Generation of Gaussian States.
-     </a>
-    </p>
-    <br/>
-   </section>
-   <section class="content-section" id="art">
-    <h2>
-     Art
-    </h2>
-    <p>
-     Whenever I get a second, I like to make art and get creative. I used to do this in physical media but given (a) my lack of time and (b) the lack of an art studio at my disposal, I have resorted to using a tablet, a stylus, and the ProCreate app. It does alright.
-    </p>
-    <br/>
-    <div class="art-gallery">
-     <!-- Replace these with your actual PNG files -->
-     <div class="art-item">
-      <img alt="Artwork 1" onclick="openModal(this)" src="balance.png"/>
-      <h3>
-       Balance
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 2" onclick="openModal(this)" src="Burning_Bright.png"/>
-      <h3>
-       Burning Bright
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 3" onclick="openModal(this)" src="Cannot_Hide.png"/>
-      <h3>
-       Heliocentric
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="Chin_Deep.png"/>
-      <h3>
-       Chin Deep
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="Coastal_Flowers.png"/>
-      <h3>
-       Coastal Flowers
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="emaciated buddha original.png"/>
-      <h3>
-       Emaciated Buddha
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="ganesha.png"/>
-      <h3>
-       Ganesha
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="Haemophilia.png"/>
-      <h3>
-       Haemophilia
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="Infernal_Hallway.png"/>
-      <h3>
-       Infernal Hallway
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="looming guilt.png"/>
-      <h3>
-       Looming Guilt
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="Projections.png"/>
-      <h3>
-       Projections
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="Skullduggery.png"/>
-      <h3>
-       Skullduggery
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="Talking_Heads.png"/>
-      <h3>
-       Chatterboxes
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="the haunted.JPG"/>
-      <h3>
-       Haunted
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="Trapped.png"/>
-      <h3>
-       Trapped
-      </h3>
-     </div>
-     <div class="art-item">
-      <img alt="Artwork 4" onclick="openModal(this)" src="breathe.png"/>
-      <h3>
-       Breathe
-      </h3>
-     </div>
-     <!-- Add more art items as needed -->
-    </div>
-    <!-- Modal for full-size images -->
-    <div class="modal" id="imageModal">
-     <span class="close" onclick="closeModal()">
-      ×
-     </span>
-     <img class="modal-content" id="modalImage"/>
-    </div>
+   <br/>
+   <p>
+    Talk given at the uOttawa/NRC PQuIP group seminar:
+    <a href="Nonlinear Generation of Gaussian States.pdf" rel="noopener noreferrer" target="_blank">
+     Nonlinear Generation of Gaussian States.
+    </a>
+   </p>
+   <br/>
    </section>
    <section class="content-section" id="misc">
     <h2>
@@ -705,18 +496,6 @@
             showSection('bio');
         });
         
-        // Modal functions for art gallery
-        function openModal(img) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modal.style.display = 'block';
-            modalImg.src = img.src;
-        }
-        
-        function closeModal() {
-            document.getElementById('imageModal').style.display = 'none';
-        }
-        
         function closeResearchModal() {
             document.getElementById('researchModal').style.display = 'none';
         }
@@ -737,11 +516,7 @@
         
         // Close modal when clicking outside the image
         window.onclick = function(event) {
-            const modal = document.getElementById('imageModal');
             const researchModal = document.getElementById('researchModal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
             if (event.target === researchModal) {
                 researchModal.style.display = 'none';
             }
